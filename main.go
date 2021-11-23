@@ -19,6 +19,10 @@ func main() {
 	fmt.Println("done")
 }
 
+func ReturnOne() int {
+	return 1
+}
+
 func LibreOfficeConvert(outputFormat string, fileName string) error {
 	libreOfficeMtx.Lock()
 	defer libreOfficeMtx.Unlock()
