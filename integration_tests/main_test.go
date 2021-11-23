@@ -12,8 +12,8 @@ import (
 )
 
 func TestLibreOfficeConvert(t *testing.T) {
-	libre.LibreOfficeConvert("csv", "../test.xls")
-	defer os.Remove("/tmp/test.csv")
+	libre.LibreOfficeConvert("csv", "../files/test.xls")
+	// defer os.Remove("/tmp/test.csv")
 	f, err := os.Open("/tmp/test.csv")
 	if err != nil {
 		log.WithError(err).Error("failed to open tmp csv file")
@@ -27,7 +27,7 @@ func TestLibreOfficeConvert(t *testing.T) {
 		t.Errorf("failed to read created csv file")
 	}
 
-	o, err := os.Open("../test.csv")
+	o, err := os.Open("../files/test.csv")
 	if err != nil {
 		t.Errorf("failed to open existing csv file: %s", err.Error())
 	}
