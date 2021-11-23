@@ -37,7 +37,7 @@ func TestLibreOfficeConvert(t *testing.T) {
 	if err != nil {
 		t.Errorf("failed to read existing csv file: %s", err.Error())
 	}
-	if recordsO[0][0] != records[0][0] {
+	if recordsO[1][0] != records[0][0] {
 		t.Errorf("files are not equal")
 	}
 }
