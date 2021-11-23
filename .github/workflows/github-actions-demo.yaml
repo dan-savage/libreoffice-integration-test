@@ -18,3 +18,6 @@ jobs:
       - name: Running Unit Tests
         id: run-tests
         run: make test
+      - name: Running Integration Tests 
+        id: run-integration
+        run: make integration

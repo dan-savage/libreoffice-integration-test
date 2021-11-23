@@ -1,0 +1,13 @@
+version: "3.9"
+services:  
+  libre-server:
+    build: .
+    container_name: libre-server
+    ports:
+      - "8000:8000"
+    entrypoint: /github_action
+    networks:
+      - lamp-network
+networks:
+  lamp-network:
+    driver: bridge
