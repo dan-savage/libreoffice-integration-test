@@ -1,7 +1,11 @@
 package main
 
 import (
+	"encoding/csv"
+	"os"
 	"testing"
+
+	"github.com/apex/log"
 )
 
 func TestReturnOne(t *testing.T) {
@@ -13,7 +17,6 @@ func TestReturnOne(t *testing.T) {
 	}
 }
 
-/*
 func TestLibreOfficeConvert(t *testing.T) {
 	LibreOfficeConvert("csv", "test.xls")
 	defer os.Remove("/tmp/test.csv")
@@ -44,4 +47,3 @@ func TestLibreOfficeConvert(t *testing.T) {
 		t.Errorf("files are not equal")
 	}
 }
-*/
