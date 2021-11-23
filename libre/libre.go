@@ -16,7 +16,7 @@ var (
 func LibreOfficeConvert(outputFormat string, fileName string) error {
 	libreOfficeMtx.Lock()
 	defer libreOfficeMtx.Unlock()
-	cmd := exec.Command("soffice", "convert", "--headless", "--convert-to", outputFormat, "--outdir", "/tmp", fileName)
+	cmd := exec.Command("libreoffice", "convert", "--headless", "--convert-to", outputFormat, "--outdir", "/tmp", fileName)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
