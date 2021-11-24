@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("started")
+	time.Sleep(time.Second * 25)
 	libre.LibreOfficeConvert("csv", "./test.xls")
 	fmt.Println("done")
 	time.Sleep(time.Minute * 25)

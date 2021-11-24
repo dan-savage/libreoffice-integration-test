@@ -10,7 +10,9 @@ echo "${result}"
 docker-compose down -v --remove-orphans --rmi all 
 
 SUB='FAIL'
-if [[ RESULT == *"$SUB"*]]; then 
+if [[ "$RESULT" == *"$SUB"* ]]; then
     exit 1
 fi
+
+
 
